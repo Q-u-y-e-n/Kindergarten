@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Quản lý điểm danh";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3 text-primary"><i class="bi bi-check2-square"></i> Quản lý điểm danh</h3>
+    <p>Ghi nhận chuyên cần, vắng mặt, và thống kê điểm danh hằng tháng.</p>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title">📅 Chọn ngày</h5>
+            <input type="date" class="form-control w-25" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            <button class="btn btn-primary mt-3"><i class="bi bi-search"></i> Xem danh sách</button>
+        </div>
+    </div>
+
+    <table class="table table-bordered align-middle">
+        <thead class="table-primary">
+            <tr>
+                <th>#</th>
+                <th>Tên học sinh</th>
+                <th>Lớp</th>
+                <th>Tình trạng</th>
+                <th>Ghi chú</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Minh An</td>
+                <td>Mầm 3</td>
+                <td><span class="badge bg-success">Có mặt</span></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lê Gia Hân</td>
+                <td>Mầm 2</td>
+                <td><span class="badge bg-danger">Vắng</span></td>
+                <td>Sốt nhẹ</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

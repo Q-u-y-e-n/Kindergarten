@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Quản lý sức khỏe";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3 text-success fw-bold"><i class="bi bi-heart-pulse"></i> Quản lý sức khỏe học sinh</h3>
+    <p class="text-muted">Theo dõi hồ sơ sức khỏe, tiêm chủng, cân nặng, chiều cao và tình trạng y tế của trẻ.</p>
+
+    <div class="row">
+        <!-- Box 1: Khám sức khỏe -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 20px;">
+                <img src="~/images/health_check.png" class="card-img-top mx-auto d-block p-3" alt="Kiểm tra sức khỏe"
+                    style="height: 200px; object-fit: contain;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-success fw-semibold">🏥 Khám sức khỏe định kỳ</h5>
+                        <p class="text-secondary">
+                            Theo dõi cân nặng, chiều cao, chỉ số BMI và tình trạng dinh dưỡng của học sinh mỗi tháng.
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-success mt-3 w-100 fw-semibold rounded-pill">
+                        Xem chi tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box 2: Tiêm chủng -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 20px;">
+                <img src="~/images/vaccine.png" class="card-img-top mx-auto d-block p-3" alt="Tiêm chủng"
+                    style="height: 200px; object-fit: contain;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-pink fw-semibold">💉 Lịch tiêm chủng</h5>
+                        <p class="text-secondary">
+                            Cập nhật danh sách vắc-xin, nhắc lịch tiêm và gửi thông báo sức khỏe định kỳ cho phụ huynh.
+                        </p>
+                    </div>
+                    <a href="#" class="btn bg-pink text-white mt-3 w-100 fw-semibold rounded-pill">
+                        Quản lý lịch tiêm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-pink {
+        color: #e76ba3 !important;
+    }
+
+    .bg-pink {
+        background-color: #e76ba3 !important;
+    }
+
+    .card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(100, 200, 150, 0.3);
+    }
+</style>

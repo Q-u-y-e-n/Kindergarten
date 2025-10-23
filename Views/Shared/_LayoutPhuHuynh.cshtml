@@ -1,0 +1,128 @@
+@*
+  ==========================================
+  🧸 Layout phụ huynh - Kindergarten System
+  ==========================================
+*@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kindergarten (Phụ huynh)</title>
+
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <style>
+        body {
+            background-color: #f5f8fa;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .sidebar {
+            background: #4c8bf5;
+            color: white;
+            width: 250px;
+            min-height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar h5 {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 0;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 25px;
+        }
+
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h5 class="text-center">👪 Phụ huynh</h5>
+
+        <a asp-controller="PhuHuynh" asp-action="Index" class="active">
+            <i class="bi bi-house-door"></i> Trang chủ
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="ThongTinCon">
+            <i class="bi bi-person-lines-fill"></i> Thông tin bé
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="DiemDanh">
+            <i class="bi bi-calendar-check"></i> Điểm danh
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="KetQua">
+            <i class="bi bi-bar-chart"></i> Kết quả học
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="SucKhoe">
+            <i class="bi bi-heart-pulse"></i> Sức khỏe
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="HoatDong">
+            <i class="bi bi-flag"></i> Ngoại khóa
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="HocPhi">
+            <i class="bi bi-cash-stack"></i> Học phí
+        </a>
+        <a asp-controller="PhuHuynh" asp-action="ThongBao">
+            <i class="bi bi-bell"></i> Thông báo
+        </a>
+
+        <hr class="text-white opacity-50" />
+        <a asp-controller="Account" asp-action="Logout" class="text-warning">
+            <i class="bi bi-box-arrow-right"></i> Đăng xuất
+        </a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+        <nav class="navbar navbar-light justify-content-between px-3">
+            <h5>@ViewData["Title"]</h5>
+            <div>
+                <i class="bi bi-person-circle text-primary me-1"></i>
+                <span>@User.Identity?.Name</span>
+            </div>
+        </nav>
+
+        <main role="main" class="mt-4">
+            @RenderBody()
+        </main>
+
+        <footer class="mt-5">
+            <p>&copy; 2025 - Kindergarten System | Dành cho phụ huynh</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

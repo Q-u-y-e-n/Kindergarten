@@ -16,5 +16,15 @@ namespace kindergarten.Controllers
         {
             return View(); // /Views/Admin/Dashboard.cshtml
         }
+
+        public IActionResult HocSinh() => View();
+        public IActionResult LopHoc() => View();
+        public IActionResult BaoCao() => View();
+        public IActionResult GiaoVien() => View();
+        public IActionResult SucKhoe() => View();
+        public IActionResult HoatDong() => View();
+        public IActionResult ThucDon() => View();
+        public IActionResult DiemDanh() => View();
+
     }
 }

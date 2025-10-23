@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "Hoạt động ngoại khóa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3 text-info fw-bold">
+        <i class="bi bi-sun"></i> Hoạt động ngoại khóa
+    </h3>
+    <p class="text-muted">Tổ chức các buổi dã ngoại, ngày hội, sự kiện giúp các bé vui chơi, khám phá và học hỏi.</p>
+
+    <div class="row g-4">
+        <!-- Box 1 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-lg border-0 text-center" style="border-radius: 20px;">
+                <img src="~/images/picnic.png" class="card-img-top mx-auto d-block p-3" alt="Dã ngoại công viên"
+                    style="height: 200px; object-fit: contain;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-success fw-semibold">🌳 Dã ngoại công viên</h5>
+                        <p class="card-text text-secondary">Các bé cùng nhau khám phá thiên nhiên và tham gia trò chơi
+                            ngoài trời vui nhộn.</p>
+                    </div>
+                    <a href="#" class="btn btn-success mt-3 w-100 rounded-pill fw-semibold">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-lg border-0 text-center" style="border-radius: 20px;">
+                <img src="~/images/art_day.png" class="card-img-top mx-auto d-block p-3" alt="Ngày hội nghệ thuật"
+                    style="height: 200px; object-fit: contain;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-pink fw-semibold">🎨 Ngày hội nghệ thuật</h5>
+                        <p class="card-text text-secondary">Trẻ tự do vẽ tranh, nặn đất sét và làm đồ thủ công để phát
+                            huy sự sáng tạo.</p>
+                    </div>
+                    <a href="#" class="btn bg-pink text-white mt-3 w-100 rounded-pill fw-semibold">Tham gia</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-lg border-0 text-center" style="border-radius: 20px;">
+                <img src="~/images/sports_day.png" class="card-img-top mx-auto d-block p-3" alt="Ngày hội thể thao"
+                    style="height: 200px; object-fit: contain;">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title text-warning fw-semibold">🏃‍♀️ Ngày hội thể thao</h5>
+                        <p class="card-text text-secondary">Các trò chơi vận động giúp trẻ rèn sức khỏe, tinh thần đồng
+                            đội và sự tự tin.</p>
+                    </div>
+                    <a href="#" class="btn btn-warning text-dark mt-3 w-100 rounded-pill fw-semibold">Xem hình ảnh</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-pink {
+        color: #e76ba3 !important;
+    }
+
+    .bg-pink {
+        background-color: #e76ba3 !important;
+    }
+
+    .card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(120, 200, 255, 0.3);
+    }
+</style>

@@ -6,92 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Mầm non Kinder</title>
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 
     <style>
+        /* ======= TỔNG THỂ ======= */
         body {
-            background-color: #fefefe;
-            font-family: 'Segoe UI', sans-serif;
-            color: #333;
+            font-family: "Segoe UI", sans-serif;
+            background-color: #fff7fa;
+            color: #444;
         }
 
+        /* ======= THANH NAV ======= */
         .navbar {
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            background: linear-gradient(to right, #fff, #f8f9fa);
-            padding: 0.8rem 1rem;
+            background: linear-gradient(90deg, #f8a5c2, #f78fb3);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
 
+        /* ======= LOGO ======= */
         .navbar-brand {
-            font-size: 1.5rem;
             font-weight: bold;
-            letter-spacing: 1px;
+            font-size: 1.4rem;
+            color: #f06292 !important;
+            background: white;
+            border-radius: 50px;
+            padding: 6px 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
+        .navbar-brand img {
+            height: 28px;
+            width: 28px;
+        }
+
+        /* ======= LIÊN KẾT ======= */
         .navbar-nav .nav-link {
-            color: #444 !important;
+            color: white !important;
+            font-weight: 500;
             margin: 0 10px;
-            transition: color 0.3s ease, transform 0.2s ease;
+            transition: 0.2s;
         }
 
         .navbar-nav .nav-link:hover {
-            color: #007bff !important;
-            transform: translateY(-2px);
+            opacity: 0.85;
         }
 
-        .btn-outline-primary {
-            border-radius: 20px;
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.6);
         }
 
-        .btn-primary {
-            border-radius: 20px;
-            background-color: #6BCB77;
+        /* ======= NÚT ======= */
+        .btn-pink {
+            background-color: #f78fb3;
             border: none;
+            color: white;
+            transition: all 0.2s ease-in-out;
         }
 
-        .btn-primary:hover {
-            background-color: #58b466;
+        .btn-pink:hover {
+            background-color: #f65a8a;
+            color: white;
         }
 
+        /* ======= NỘI DUNG ======= */
+        main.container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ======= FOOTER ======= */
         footer {
-            background-color: #f8f9fa;
-            padding: 15px 0;
-            font-size: 0.9rem;
+            background-color: #ffe6ef;
             color: #555;
-            border-top: 2px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 15px 0;
+            border-top: 1px solid #fbc2d9;
         }
 
         footer a {
-            color: #4D96FF;
+            color: #f06292;
             text-decoration: none;
+            font-weight: 500;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* ======= HIỆU ỨNG MẦM NON ======= */
+        .brand-colorful span:nth-child(1) {
+            color: #f78fb3;
+        }
+
+        .brand-colorful span:nth-child(2) {
+            color: #f8a5c2;
+        }
+
+        .brand-colorful span:nth-child(3) {
+            color: #fbc2d9;
+        }
+
+        .brand-colorful span:nth-child(4) {
+            color: #f497b6;
+        }
     </style>
 </head>
 
 <body>
+    <!-- ======= HEADER ======= -->
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-sm navbar-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- LOGO -->
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                    <span style="color:#FF6B6B;">M</span>
-                    <span style="color:#FFD93D;">ầ</span>
-                    <span style="color:#6BCB77;">m</span>
-                    <span> </span>
-                    <span style="color:#4D96FF;">n</span>
-                    <span style="color:#FF6B6B;">o</span>
-                    <span style="color:#FFD93D;">n</span>
-                    <span> </span>
-                    <span style="color:#6BCB77;">K</span>
-                    <span style="color:#4D96FF;">i</span>
-                    <span style="color:#FF6B6B;">n</span>
-                    <span style="color:#FFD93D;">d</span>
-                    <span style="color:#6BCB77;">e</span>
-                    <span style="color:#4D96FF;">r</span>
+
+                    <span>Mầm non Kinder</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -99,44 +135,47 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav flex-grow-1 justify-content-center">
-                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
-                                asp-action="Index">Trang chủ</a></li>
-                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
-                                asp-action="GioiThieu">Giới thiệu</a></li>
-                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
+                    <!-- MENU CHÍNH -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="GioiThieu">Giới
+                                thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home"
                                 asp-action="ChuongTrinhHoc">Chương trình học</a></li>
-                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
-                                asp-action="LienHe">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="LienHe">Liên hệ</a>
+                        </li>
                     </ul>
 
+                    <!-- NÚT TÀI KHOẢN -->
                     <ul class="navbar-nav">
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
-                            <!-- ✅ Khi đã đăng nhập -->
                             <li class="nav-item me-2">
-                                <span class="nav-link text-success fw-semibold">Xin chào, @User.Identity.Name!</span>
+                                <span class="nav-link text-light fw-semibold">
+                                    <i class="bi bi-person-circle me-1"></i>Xin chào, @User.Identity.Name
+                                </span>
                             </li>
                             <li class="nav-item">
-                            <li class="nav-item">
-                                <form class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout"
-                                    method="post">
-                                    @Html.AntiForgeryToken() <button type="submit"
-                                        class="nav-link btn btn-link text-danger fw-semibold">Đăng xuất</button>
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-pink">
+                                        <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                                    </button>
                                 </form>
-                            </li>
                             </li>
                         }
                         else
                         {
-                            <!-- ✅ Khi chưa đăng nhập -->
                             <li class="nav-item me-2">
-                                <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Login">Đăng
-                                    nhập</a>
+                                <a class="btn btn-pink" asp-controller="Account" asp-action="Login">
+                                    <i class="bi bi-box-arrow-in-right"></i> Đăng nhập
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Đăng ký tài
-                                    khoản</a>
+                                <a class="btn btn-pink" asp-controller="Account" asp-action="Register">
+                                    <i class="bi bi-person-plus"></i> Đăng ký
+                                </a>
                             </li>
                         }
                     </ul>
@@ -145,21 +184,18 @@
         </nav>
     </header>
 
-    <main class="container mt-4 mb-5">
+    <!-- ======= NỘI DUNG ======= -->
+    <main class="container shadow-sm">
         @RenderBody()
     </main>
 
+    <!-- ======= CHÂN TRANG ======= -->
     <footer>
-        <div class="container text-center">
-            &copy; 2025 - <strong>Mầm non Kinder</strong> |
-            <a asp-controller="Home" asp-action="Privacy">Chính sách bảo mật</a>
-        </div>
+        💗 © 2025 - <strong>Mầm non Kinder</strong> |
+        <a asp-controller="Home" asp-action="Privacy">Chính sách bảo mật</a>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

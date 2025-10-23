@@ -1,0 +1,101 @@
+@{
+    ViewData["Title"] = "Quản lý lớp học";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3 text-primary fw-bold"><i class="bi bi-building"></i> Quản lý lớp học</h3>
+    <p class="text-muted">Tạo, chỉnh sửa, xóa lớp học và gán giáo viên chủ nhiệm phụ trách.</p>
+
+    <a href="#" class="btn btn-primary mb-3"><i class="bi bi-plus-circle"></i> Thêm lớp</a>
+
+    <div class="table-responsive">
+        <table class="table table-hover align-middle shadow-sm rounded-3 overflow-hidden">
+            <thead style="background-color:#fcd6e1;" class="text-center">
+                <tr>
+                    <th>Mã lớp</th>
+                    <th>Tên lớp</th>
+                    <th>Sĩ số</th>
+                    <th>Giáo viên chủ nhiệm</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td>L01</td>
+                    <td>Mầm 3</td>
+                    <td>25</td>
+                    <td>Trần Thị B</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info"><i class="bi bi-eye"></i></a>
+                        <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>L02</td>
+                    <td>Chồi 1</td>
+                    <td>28</td>
+                    <td>Nguyễn Thị Lan</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info"><i class="bi bi-eye"></i></a>
+                        <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>L03</td>
+                    <td>Lá 2</td>
+                    <td>30</td>
+                    <td>Phạm Văn Hùng</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info"><i class="bi bi-eye"></i></a>
+                        <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>L04</td>
+                    <td>Mầm 1</td>
+                    <td>22</td>
+                    <td>Nguyễn Thị Thu</td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-info"><i class="bi bi-eye"></i></a>
+                        <a href="#" class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></a>
+                        <a href="#" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .table th,
+    .table td {
+        vertical-align: middle;
+    }
+
+    .btn-info {
+        background-color: #9ad0ec;
+        border: none;
+        color: white;
+    }
+
+    .btn-warning {
+        background-color: #fbc687;
+        border: none;
+        color: white;
+    }
+
+    .btn-danger {
+        background-color: #f28482;
+        border: none;
+    }
+
+    .btn-info:hover,
+    .btn-warning:hover,
+    .btn-danger:hover {
+        opacity: 0.85;
+    }
+</style>

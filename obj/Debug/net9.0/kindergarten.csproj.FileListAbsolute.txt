@@ -149,3 +149,4 @@ E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.pdb
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.genruntimeconfig.cache
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\ref\kindergarten.dll
+E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.sourcelink.json

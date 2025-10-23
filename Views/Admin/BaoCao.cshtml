@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Báo cáo thống kê";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3">📊 Báo cáo thống kê</h3>
+    <p>Tổng hợp dữ liệu học sinh, điểm danh, học phí, và sức khỏe.</p>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-people fs-1 text-primary"></i>
+                    <h6 class="mt-2">Sĩ số học sinh</h6>
+                    <p>150 học sinh</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-check2-square fs-1 text-success"></i>
+                    <h6 class="mt-2">Tỷ lệ chuyên cần</h6>
+                    <p>97%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="bi bi-cash-coin fs-1 text-warning"></i>
+                    <h6 class="mt-2">Tổng thu học phí tháng</h6>
+                    <p>120.000.000 đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

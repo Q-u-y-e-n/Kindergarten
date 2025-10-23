@@ -1,14 +1,43 @@
 @{
-    ViewData["Title"] = "Trang phụ huynh";
+    ViewData["Title"] = "Trang chủ phụ huynh";
+    Layout = "_LayoutPhuHuynh";
 }
 
-<div class="container mt-4">
-    <h2>Xin chào, @ViewBag.HoTen!</h2>
-    <p>Chào mừng bạn đến với trang phụ huynh của trường Mầm Non.</p>
+<div class="text-center">
+    <h3 class="fw-bold mb-2">Chào mừng phụ huynh <span class="text-primary">@User.Identity?.Name</span>!</h3>
+    <p class="text-secondary">Theo dõi hành trình học tập, sức khỏe và học phí của bé một cách dễ dàng 💖</p>
 
-    <ul>
-        <li><a asp-controller="Parent" asp-action="ThongTinCon">Xem thông tin học sinh</a></li>
-        <li><a asp-controller="Parent" asp-action="ThongBao">Xem thông báo từ nhà trường</a></li>
-        <li><a asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
-    </ul>
+    <div class="row mt-5 g-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 hover-shadow">
+                <i class="bi bi-person-lines-fill fs-1 text-primary"></i>
+                <h5 class="mt-3">Thông tin bé</h5>
+                <a href="/PhuHuynh/ThongTinCon" class="btn btn-outline-primary mt-3">Xem chi tiết</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 hover-shadow">
+                <i class="bi bi-heart-pulse fs-1 text-danger"></i>
+                <h5 class="mt-3">Sức khỏe</h5>
+                <a href="/SucKhoe" class="btn btn-outline-danger mt-3">Xem chi tiết</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4 hover-shadow">
+                <i class="bi bi-cash-stack fs-1 text-success"></i>
+                <h5 class="mt-3">Học phí</h5>
+                <a href="/HocPhi" class="btn btn-outline-success mt-3">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+</style>

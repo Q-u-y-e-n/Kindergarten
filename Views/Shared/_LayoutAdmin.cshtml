@@ -1,34 +1,121 @@
+@*
+    File: Views/Shared/_LayoutAdmin.cshtml
+    Layout gọn, hiện đại, không icon, có hiệu ứng mượt và responsive
+*@
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@ViewData["Title"] - Quản lý mầm non</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        /* ==== Hiệu ứng tổng thể ==== */
+        body {
+            background-color: #f5f8fa;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+        }
+
+        /* ==== Navbar ==== */
+        .navbar {
+            background: linear-gradient(90deg, #007bff, #00a2ff);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #fff !important;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            margin: 0 8px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd166 !important;
+            transform: translateY(-1px);
+        }
+
+        /* ==== Container + Animation ==== */
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main.container {
+            margin-top: 80px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        footer {
+            background: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive cho mobile */
+        @@media (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="/Admin">Trang quản trị</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li><a class="nav-link" href="/HocSinh">Học sinh</a></li>
-                <li><a class="nav-link" href="/GiaoVien">Giáo viên</a></li>
-                <li><a class="nav-link" href="/LopHoc">Lớp học</a></li>
-                <li><a class="nav-link" href="/ThucDon">Thực đơn</a></li>
-                <li><a class="nav-link" href="/SucKhoe">Sức khỏe</a></li>
-                <li><a class="nav-link" href="/HoatDong">Hoạt động</a></li>
-                <li><a class="nav-link" href="/DiemDanh">Điểm danh</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Admin/Dashboard">Trang quản trị</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/Admin/HocSinh">Học sinh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/GiaoVien">Giáo viên</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/LopHoc">Lớp học</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/ThucDon">Thực đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/SucKhoe">Sức khỏe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/HoatDong">Hoạt động</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Admin/DiemDanh">Điểm danh</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Account/Logout">Đăng xuất</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container mt-4">
+
+    <main class="container">
         @RenderBody()
-    </div>
-    <footer class="text-center mt-5">
-        <p>© 2025 - Quản lý Mầm non</p>
+    </main>
+
+    <footer>
+        © 2025 - Quản lý Mầm non | Thiết kế bởi Nhóm OOP
     </footer>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

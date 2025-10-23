@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "Đăng ký tư vấn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-5">
+                    <h3 class="text-center mb-4 text-primary">
+                        <i class="bi bi-chat-dots"></i> Đăng ký tư vấn nhập học
+                    </h3>
+                    <p class="text-center text-muted mb-4">
+                        Hãy để lại thông tin của bạn – chúng tôi sẽ liên hệ để tư vấn chi tiết về chương trình học, học
+                        phí và lịch học.
+                    </p>
+
+                    <form method="post" asp-action="DangKyTuVan" asp-controller="Home">
+                        <div class="mb-3">
+                            <label for="HoTen" class="form-label">Họ và tên phụ huynh</label>
+                            <input type="text" class="form-control" id="HoTen" name="HoTen" required
+                                placeholder="Nhập họ tên của bạn">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="Email" name="Email" required
+                                placeholder="example@gmail.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="SoDienThoai" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="SoDienThoai" name="SoDienThoai" required
+                                placeholder="Nhập số điện thoại liên hệ">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="NoiDung" class="form-label">Nội dung cần tư vấn</label>
+                            <textarea class="form-control" id="NoiDung" name="NoiDung" rows="4"
+                                placeholder="Ví dụ: Chương trình học 4-5 tuổi, học phí..."></textarea>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-send"></i> Gửi đăng ký
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Hiển thị thông báo sau khi gửi thành công (giả lập)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            alert("🎉 Cảm ơn bạn! Chúng tôi sẽ liên hệ tư vấn sớm nhất có thể.");
+        }
+    </script>
+}

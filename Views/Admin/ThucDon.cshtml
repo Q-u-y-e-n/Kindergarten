@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Quản lý thực đơn";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-3 text-pink fw-bold"><i class="bi bi-egg-fried"></i> Quản lý thực đơn</h3>
+    <p class="text-muted">Xây dựng thực đơn dinh dưỡng cân bằng cho từng nhóm tuổi.</p>
+
+    <div class="row">
+        <!-- Bữa sáng -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 20px;">
+                <img src="~/images/breakfast.png" class="card-img-top mx-auto d-block p-3" alt="Bữa sáng"
+                    style="height: 180px; object-fit: contain;">
+                <div class="card-body">
+                    <h5 class="card-title text-pink fw-semibold">🍞 Bữa sáng</h5>
+                    <p class="text-secondary">Bánh mì trứng ốp la, sữa tươi, trái cây.</p>
+                    <span class="badge bg-pink text-white p-2 rounded-pill">Calories: 350 kcal</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bữa trưa -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 20px;">
+                <img src="~/images/lunch.png" class="card-img-top mx-auto d-block p-3" alt="Bữa trưa"
+                    style="height: 180px; object-fit: contain;">
+                <div class="card-body">
+                    <h5 class="card-title text-success fw-semibold">🍛 Bữa trưa</h5>
+                    <p class="text-secondary">Cơm gà xé, canh rau củ, sữa chua.</p>
+                    <span class="badge bg-success text-white p-2 rounded-pill">Calories: 550 kcal</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bữa xế -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 20px;">
+                <img src="~/images/snack.png" class="card-img-top mx-auto d-block p-3" alt="Bữa xế"
+                    style="height: 180px; object-fit: contain;">
+                <div class="card-body">
+                    <h5 class="card-title text-warning fw-semibold">🍪 Bữa xế</h5>
+                    <p class="text-secondary">Bánh quy bơ, sữa chua, nước trái cây.</p>
+                    <span class="badge bg-warning text-dark p-2 rounded-pill">Calories: 280 kcal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text-pink {
+        color: #e76ba3 !important;
+    }
+
+    .bg-pink {
+        background-color: #e76ba3 !important;
+    }
+
+    .card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+    }
+</style>

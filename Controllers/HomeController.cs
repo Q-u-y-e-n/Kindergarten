@@ -17,6 +17,26 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult ChuongTrinhHoc()
+    {
+        return View();
+    }
+    public IActionResult CoSoVatChat()
+    {
+        return View();
+    }
+    public IActionResult GioiThieu()
+    {
+        return View();
+    }
+    public IActionResult LienHe()
+    {
+        return View();
+    }
+    public IActionResult News()
+    {
+        return View();
+    }
 
     public IActionResult Privacy()
     {
@@ -28,4 +48,19 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    [HttpGet]
+    public IActionResult DangKyTuVan()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult DangKyTuVan(string HoTen, string Email, string SoDienThoai, string NoiDung)
+    {
+        // 🔹 Tạm thời chỉ hiển thị thông báo thành công (sau có thể lưu DB)
+        // Có thể ghi log hoặc lưu vào bảng DangKyTuVan trong database.
+        Console.WriteLine($"Tư vấn từ: {HoTen} - {Email} - {SoDienThoai} - {NoiDung}");
+        return RedirectToAction("DangKyTuVan", new { success = true });
+    }
+
 }
