@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Quản lý mầm non</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/Admin">Trang quản trị</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li><a class="nav-link" href="/HocSinh">Học sinh</a></li>
+                <li><a class="nav-link" href="/GiaoVien">Giáo viên</a></li>
+                <li><a class="nav-link" href="/LopHoc">Lớp học</a></li>
+                <li><a class="nav-link" href="/ThucDon">Thực đơn</a></li>
+                <li><a class="nav-link" href="/SucKhoe">Sức khỏe</a></li>
+                <li><a class="nav-link" href="/HoatDong">Hoạt động</a></li>
+                <li><a class="nav-link" href="/DiemDanh">Điểm danh</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+    <footer class="text-center mt-5">
+        <p>© 2025 - Quản lý Mầm non</p>
+    </footer>
+</body>
+
+</html>

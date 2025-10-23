@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Bảng điều khiển Admin";
+    Layout = "_LayoutAdmin"; // Sử dụng layout dành cho Admin
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-success mb-4">🎓 BẢNG ĐIỀU KHIỂN QUẢN TRỊ</h2>
+
+    <div class="row text-center">
+        <div class="col-md-3 mb-3">
+            <a href="/Admin/HocSinh/Index" class="card shadow-sm p-3 text-decoration-none">
+                <h5>👶 Quản lý học sinh</h5>
+                <p class="text-muted">Thêm, sửa, xóa học sinh</p>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <a href="/Admin/LopHoc" class="card shadow-sm p-3 text-decoration-none">
+                <h5>🏫 Lớp học</h5>
+                <p class="text-muted">Theo dõi sĩ số và giáo viên</p>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <a href="/Admin/BaoCao" class="card shadow-sm p-3 text-decoration-none">
+                <h5>📊 Báo cáo</h5>
+                <p class="text-muted">Thống kê học sinh, điểm danh</p>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <a href="/Admin/GiaoVien" class="card shadow-sm p-3 text-decoration-none">
+                <h5>👩‍🏫 Giáo viên</h5>
+                <p class="text-muted">Quản lý danh sách giáo viên</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="/Account/Logout" class="btn btn-outline-danger">Đăng xuất</a>
+    </div>
+</div>

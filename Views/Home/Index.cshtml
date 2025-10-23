@@ -1,0 +1,257 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+}
+<div class="hero position-relative text-center text-white">
+    <img src="~/images/banner.png" alt="Banner Kinder" class="img-fluid w-100" />
+    <div class="hero-text position-absolute top-50 start-50 translate-middle">
+        <h1 class="fw-bold"> 🌈 Chào mừng đến với Mầm non Kinder</h1>
+        <p>Nơi ươm mầm tương lai cho bé yêu của bạn</p>
+        <a class="btn btn-primary btn-lg" asp-controller="Home" asp-action="DangKyNhapHoc">Đăng ký ngay</a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row text-center g-4">
+
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-blue">
+                <h2 class="fw-bold text-dark">Chương trình học</h2>
+                <p>Phương pháp giáo dục tiên tiến, giúp bé phát triển toàn diện.</p>
+                <a class="btn btn-outline-dark" asp-action="ChuongTrinhHoc">Xem chi tiết »</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-yellow">
+                <h2 class="fw-bold text-dark">Cơ sở vật chất</h2>
+                <p>Phòng học an toàn, sân chơi rộng rãi, trang thiết bị hiện đại.</p>
+                <a class="btn btn-outline-dark" asp-action="CoSoVatChat">Xem chi tiết »</a>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-pink">
+                <h2 class="fw-bold text-dark">Đội ngũ giáo viên</h2>
+                <p>Giáo viên yêu trẻ, giàu kinh nghiệm và được đào tạo bài bản.</p>
+                <a class="btn btn-outline-dark" asp-action="GioiThieu">Tìm hiểu thêm »</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container mt-5 pt-4">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+            <h2 class="fw-bold text-primary mb-3">🌟 Về Mầm non Kinder</h2>
+            <p>Với hơn 10 năm kinh nghiệm, Kinder tự hào mang đến môi trường giáo dục an toàn, hiện đại và tràn đầy cảm
+                hứng. Chúng tôi tin rằng mỗi đứa trẻ là một thiên tài nhỏ, cần được yêu thương, tôn trọng và khuyến
+                khích để phát huy tối đa tiềm năng.</p>
+            <h3 class="fw-bold text-success mt-4 mb-3">📚 Chương trình học đa dạng</h3>
+            <p>Chương trình học tại Kinder được thiết kế khoa học, kết hợp giữa chuẩn quốc gia và các phương pháp giáo
+                dục sớm tiên tiến (như Montessori, STEM...), giúp bé phát triển toàn diện 5 lĩnh vực:</p>
+            <ul>
+                <li><strong>Thể chất:</strong> Vận động tinh & thô, dinh dưỡng cân bằng.</li>
+                <li><strong>Nhận thức:</strong> Khám phá khoa học, làm quen toán học, logic.</li>
+                <li><strong>Ngôn ngữ:</strong> Phát triển kỹ năng nghe, nói, đọc, viết (tiền đề).</li>
+                <li><strong>Tình cảm - Xã hội:</strong> Kỹ năng giao tiếp, hợp tác, thể hiện cảm xúc.</li>
+                <li><strong>Thẩm mỹ:</strong> Cảm thụ âm nhạc, hội họa, sáng tạo nghệ thuật.</li>
+            </ul>
+            <a class="btn btn-outline-success" asp-action="ChuongTrinhHoc">Tìm hiểu kỹ hơn »</a>
+        </div>
+        <div class="col-lg-6">
+
+            <img src="~/images/classroom_fun.png" alt="Trẻ em vui học trong lớp" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container mt-5">
+    <h2 class="text-center fw-bold text-warning mb-4">🏫 Cơ sở vật chất hiện đại & an toàn</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0">
+
+                <img src="~/images/classroom.png" class="card-img-top" alt="Phòng học sáng sủa">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Phòng học thoáng mát</h5>
+                    <p class="card-text">Thiết kế tràn ngập ánh sáng tự nhiên, trang bị giáo cụ trực quan, an toàn theo
+                        chuẩn quốc tế.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0">
+
+                <img src="~/images/playground.png" class="card-img-top" alt="Sân chơi ngoài trời">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Sân chơi đa dạng</h5>
+                    <p class="card-text">Khu vui chơi trong nhà và ngoài trời rộng rãi, nhiều cây xanh, trang bị cầu
+                        trượt, xích đu, nhà banh...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-0">
+
+                <img src="~/images/kitchen.png" class="card-img-top" alt="Bếp ăn sạch sẽ">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Bếp ăn & Nhà ăn</h5>
+                    <p class="card-text">Khu vực bếp một chiều đạt chuẩn VSATTP, nhà ăn sạch sẽ, bàn ghế phù hợp với lứa
+                        tuổi của trẻ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a class="btn btn-outline-warning" asp-action="CoSoVatChat">Xem thêm hình ảnh »</a>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container mt-5">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2">
+            <h2 class="fw-bold text-info mb-3">👩‍🏫 Đội ngũ giáo viên tâm huyết</h2>
+            <p>Giáo viên tại Kinder không chỉ là người dạy mà còn là người bạn đồng hành, người mẹ thứ hai của bé. 100%
+                giáo viên tốt nghiệp chuyên ngành sư phạm mầm non, giàu kinh nghiệm, yêu trẻ và thường xuyên được tập
+                huấn nâng cao chuyên môn.</p>
+            <blockquote class="blockquote fst-italic mt-3">
+                "Chúng tôi tin rằng sự tận tâm và tình yêu thương của giáo viên là nền tảng vững chắc cho sự phát triển
+                của trẻ."
+            </blockquote>
+            <a class="btn btn-outline-info mt-3" asp-action="GioiThieu">Gặp gỡ giáo viên »</a>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+
+            <img src="~/images/teacher_playing.png" alt="Giáo viên chơi cùng trẻ" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4" style="color: #6f42c1;">🎈 Hoạt động ngoại khóa phong phú</h2>
+    <p class="text-center text-muted mb-4">Giúp bé rèn luyện kỹ năng, khám phá sở thích và có những trải nghiệm đáng
+        nhớ.</p>
+    <div class="row text-center g-4">
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-green h-100">
+                <i class="fas fa-futbol fa-3x mb-3 text-success"></i>
+                <h3 class="fw-bold text-dark">Thể chất & Vận động</h3>
+                <p>Yoga kids, Aerobic, bóng đá mini, trò chơi dân gian...</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-purple h-100">
+                <i class="fas fa-paint-brush fa-3x mb-3" style="color: #6f42c1;"></i>
+                <h3 class="fw-bold text-dark">Âm nhạc & Nghệ thuật</h3>
+                <p>Cảm thụ âm nhạc, học đàn, vẽ tranh, tạo hình từ vật liệu tái chế...</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-4 shadow-sm bg-pastel-orange h-100">
+                <i class="fas fa-flask fa-3x mb-3 text-warning"></i>
+                <h3 class="fw-bold text-dark">Khám phá & Khoa học</h3>
+                <p>Tham quan, dã ngoại, thí nghiệm vui, làm vườn...</p>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a class="btn btn-outline-dark" asp-action="HoatDongNgoaiKhoa">Xem lịch hoạt động »</a>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center fw-bold mb-4" style="color: #fd7e14;">🍎 Chế độ dinh dưỡng khoa học</h2>
+    <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+
+            <img src="~/images/meal_tray.png" alt="Khay cơm dinh dưỡng" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6">
+            <p>Bữa ăn tại Kinder được xây dựng bởi chuyên gia dinh dưỡng, đảm bảo cung cấp đầy đủ năng lượng và dưỡng
+                chất thiết yếu cho sự phát triển của bé.</p>
+            <ul>
+                <li>Thực đơn thay đổi hàng ngày, theo mùa.</li>
+                <li>Nguyên liệu tươi ngon, nguồn gốc rõ ràng.</li>
+                <li>Chế biến hợp khẩu vị, đảm bảo vệ sinh an toàn thực phẩm.</li>
+                <li>Quan tâm đến trẻ có chế độ ăn đặc biệt (dị ứng...).</li>
+            </ul>
+            <a class="btn btn-outline-orange mt-3" asp-controller="Parent" asp-action="ThucDon">Xem thực đơn tuần »</a>
+            *(Lưu ý: Link này nên dẫn đến trang thực đơn chung nếu chưa đăng nhập)*
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+}
+
+<style>
+    /* 🎨 Màu pastel nhẹ nhàng (Giữ nguyên) */
+    .bg-pastel-blue {
+        background-color: #e7f3ff;
+    }
+
+    .bg-pastel-yellow {
+        background-color: #fff9e0;
+    }
+
+    .bg-pastel-pink {
+        background-color: #fde7ea;
+    }
+
+    .bg-pastel-green {
+        background-color: #d1e7dd;
+    }
+
+    .bg-pastel-purple {
+        background-color: #e2d9f3;
+    }
+
+    .bg-pastel-orange {
+        background-color: #fff3cd;
+    }
+
+    /* Đổi sang vàng nhạt hơn */
+    .bg-pastel-cyan {
+        background-color: #cff4fc;
+    }
+
+    .bg-pastel-peach {
+        background-color: #ffecd9;
+    }
+
+    /* Hiệu ứng hover nhẹ cho thẻ (Giữ nguyên) */
+    .bg-pastel-blue:hover,
+    .bg-pastel-yellow:hover,
+    .bg-pastel-pink:hover,
+    .bg-pastel-green:hover,
+    .bg-pastel-purple:hover,
+    .bg-pastel-orange:hover,
+    .bg-pastel-cyan:hover,
+    .bg-pastel-peach:hover,
+    .card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+        /* Thêm !important để ưu tiên */
+    }
+
+    .hero img {
+        filter: brightness(0.7);
+    }
+
+    hr {
+        border-top: 1px solid #eee;
+    }
+</style>

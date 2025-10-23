@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Trang phụ huynh";
+}
+
+<div class="container mt-4">
+    <h2>Xin chào, @ViewBag.HoTen!</h2>
+    <p>Chào mừng bạn đến với trang phụ huynh của trường Mầm Non.</p>
+
+    <ul>
+        <li><a asp-controller="Parent" asp-action="ThongTinCon">Xem thông tin học sinh</a></li>
+        <li><a asp-controller="Parent" asp-action="ThongBao">Xem thông báo từ nhà trường</a></li>
+        <li><a asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
+    </ul>
+</div>

@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mầm non Kinder</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        body {
+            background-color: #fefefe;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(to right, #fff, #f8f9fa);
+            padding: 0.8rem 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #444 !important;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-primary {
+            border-radius: 20px;
+        }
+
+        .btn-primary {
+            border-radius: 20px;
+            background-color: #6BCB77;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #58b466;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            color: #555;
+            border-top: 2px solid #eee;
+        }
+
+        footer a {
+            color: #4D96FF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <span style="color:#FF6B6B;">M</span>
+                    <span style="color:#FFD93D;">ầ</span>
+                    <span style="color:#6BCB77;">m</span>
+                    <span> </span>
+                    <span style="color:#4D96FF;">n</span>
+                    <span style="color:#FF6B6B;">o</span>
+                    <span style="color:#FFD93D;">n</span>
+                    <span> </span>
+                    <span style="color:#6BCB77;">K</span>
+                    <span style="color:#4D96FF;">i</span>
+                    <span style="color:#FF6B6B;">n</span>
+                    <span style="color:#FFD93D;">d</span>
+                    <span style="color:#6BCB77;">e</span>
+                    <span style="color:#4D96FF;">r</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
+                                asp-action="Index">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
+                                asp-action="GioiThieu">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
+                                asp-action="ChuongTrinhHoc">Chương trình học</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" asp-controller="Home"
+                                asp-action="LienHe">Liên hệ</a></li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @if (User.Identity != null && User.Identity.IsAuthenticated)
+                        {
+                            <!-- ✅ Khi đã đăng nhập -->
+                            <li class="nav-item me-2">
+                                <span class="nav-link text-success fw-semibold">Xin chào, @User.Identity.Name!</span>
+                            </li>
+                            <li class="nav-item">
+                            <li class="nav-item">
+                                <form class="form-inline" asp-area="" asp-controller="Account" asp-action="Logout"
+                                    method="post">
+                                    @Html.AntiForgeryToken() <button type="submit"
+                                        class="nav-link btn btn-link text-danger fw-semibold">Đăng xuất</button>
+                                </form>
+                            </li>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- ✅ Khi chưa đăng nhập -->
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Login">Đăng
+                                    nhập</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary" asp-controller="Account" asp-action="Register">Đăng ký tài
+                                    khoản</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4 mb-5">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            &copy; 2025 - <strong>Mầm non Kinder</strong> |
+            <a asp-controller="Home" asp-action="Privacy">Chính sách bảo mật</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

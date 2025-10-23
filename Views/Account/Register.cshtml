@@ -1,0 +1,108 @@
+@model kindergarten.Models.RegisterViewModel // ✅ Use RegisterViewModel
+
+@{
+    ViewData["Title"] = "Đăng ký tài khoản";
+    Layout = "_Layout"; // Use the main layout
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <h2 class="text-center mb-4 text-primary">🧸 Đăng ký tài khoản Phụ huynh & Bé</h2>
+
+            <form method="post" asp-action="Register">
+
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                @Html.AntiForgeryToken()
+
+                <h4 class="mb-3">Thông tin Phụ huynh</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="HoTen" class="form-label"></label>
+                        <input asp-for="HoTen" class="form-control" />
+                        <span asp-validation-for="HoTen" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="TenDangNhap" class="form-label"></label>
+                        <input asp-for="TenDangNhap" class="form-control" />
+                        <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" type="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="SoDienThoai" class="form-label"></label>
+                        <input asp-for="SoDienThoai" class="form-control" />
+                        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="DiaChi" class="form-label"></label>
+                        <input asp-for="DiaChi" class="form-control" />
+                        <span asp-validation-for="DiaChi" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="ConfirmPassword" class="form-label"></label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h4 class="mb-3">Thông tin của bé</h4>
+                <div class="mb-3">
+                    <label asp-for="HoTenBe" class="form-label"></label>
+                    <input asp-for="HoTenBe" class="form-control" />
+                    <span asp-validation-for="HoTenBe" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="NgaySinhBe" class="form-label"></label>
+                        <input asp-for="NgaySinhBe" type="date" class="form-control" />
+                        <span asp-validation-for="NgaySinhBe" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="GioiTinhBe" class="form-label"></label>
+                        <select asp-for="GioiTinhBe" class="form-select">
+                            <option value="">-- Chọn giới tính --</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                        <span asp-validation-for="GioiTinhBe" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Hoàn tất Đăng ký</button>
+
+                <div class="mt-4 text-center">
+                    <small>Đã có tài khoản? <a asp-action="Login" asp-controller="Account">Đăng nhập ngay</a></small>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        // Enable client-side validation
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
