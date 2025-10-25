@@ -62,7 +62,7 @@ namespace kindergarten.Controllers
                 return View(model);
             }
 
-            // ✅ Tạo cookie xác thực
+            //  Tạo cookie xác thực
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, user.TenDangNhap),
@@ -126,7 +126,7 @@ namespace kindergarten.Controllers
         {
             using (var sha256 = SHA256.Create())
             {
-                // ⚠️ Dùng Unicode để khớp với HASHBYTES trong SQL Server
+                //  Dùng Unicode để khớp với HASHBYTES trong SQL Server
                 var bytes = sha256.ComputeHash(Encoding.Unicode.GetBytes(password));
                 return BitConverter.ToString(bytes).Replace("-", "").ToLowerInvariant();
             }
@@ -198,7 +198,7 @@ namespace kindergarten.Controllers
             return RedirectToAction("Login");
         }
 
-        // ✅ HÀM KIỂM TRA ĐỘ MẠNH MẬT KHẨU
+        //  HÀM KIỂM TRA ĐỘ MẠNH MẬT KHẨU
         private string? ValidatePasswordStrength(string password)
         {
             if (string.IsNullOrWhiteSpace(password))
