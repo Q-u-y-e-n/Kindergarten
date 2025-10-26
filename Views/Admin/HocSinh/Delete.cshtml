@@ -1,0 +1,11 @@
+@model kindergarten.Models.GiaoVien
+
+<h2 class="text-danger">Xóa giáo viên</h2>
+<p>Bạn có chắc chắn muốn xóa giáo viên <strong>@Model.HoTen</strong> không?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="MaGV" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

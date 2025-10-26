@@ -69,6 +69,7 @@ E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.MvcApplicationPartsAssemblyInfo.cache
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.RazorAssemblyInfo.cache
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.RazorAssemblyInfo.cs
+E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.sourcelink.json
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\rjimswa.dswa.cache.json
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -149,4 +150,3 @@ E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.pdb
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.genruntimeconfig.cache
 E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\ref\kindergarten.dll
-E:\chuyendulieu\hk1_nam4_25-26\PP_PT_PM_HĐ\GK_OOP(2)\kindergarten\obj\Debug\net9.0\kindergarten.sourcelink.json

@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kindergarten.Models
 {
-    [Table("PhuHuynh")]
+    [Table("PHUHUYNH")] // ✅ Tên bảng trùng SQL
     public class PhuHuynh
     {
         [Key]
         public int MaPH { get; set; }
 
         [Required, StringLength(100)]
-        public string HoTen { get; set; }
+        public string HoTen { get; set; } = string.Empty;
 
         [StringLength(50)]
         public string? QuanHe { get; set; } // Cha, Mẹ, Người giám hộ
@@ -26,12 +26,10 @@ namespace kindergarten.Models
         [StringLength(100)]
         public string? NgheNghiep { get; set; }
 
-        // ✅ Liên kết với bảng TaiKhoan
-        [ForeignKey("TaiKhoan")]
-        public int TaiKhoanId { get; set; }
-        public TaiKhoan TaiKhoan { get; set; }
+        // ❌ Không có cột TaiKhoanId trong bảng SQL nên bỏ đi
+        // Nếu bạn muốn liên kết với bảng TaiKhoan thì phải ALTER TABLE SQL để thêm cột này
 
-        // ✅ Liên kết nhiều-nhiều với Học sinh
-        public ICollection<HocSinhPhuHuynh>? HocSinhPhuHuynhs { get; set; }
+        // ✅ Quan hệ nhiều - nhiều với học sinh
+        public ICollection<HOCSINH_PHUHUYNH>? HocSinhPhuHuynhs { get; set; }
     }
 }

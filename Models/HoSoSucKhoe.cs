@@ -4,31 +4,32 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kindergarten.Models
 {
-
-    [Table("HoSoSucKhoe")]
+    [Table("HOSOSUCKHOE")]
     public class HoSoSucKhoe
     {
         [Key]
-        public int MaHoSo { get; set; }
+        public int MaSK { get; set; }
 
         [ForeignKey("HocSinh")]
         public int MaHS { get; set; }
 
-        public DateTime NgayKiemTra { get; set; } = DateTime.Now;
+        public HocSinh? HocSinh { get; set; }
 
-        [Range(0, 300)]
         public double? ChieuCao { get; set; }
-
-        [Range(0, 200)]
         public double? CanNang { get; set; }
 
+        // 🔹 Phải dùng [Column] để khớp chính xác tên có dấu “ị”
+
+
+        [StringLength(100)]
+        public string? DiUng { get; set; }
+
         [StringLength(255)]
-        public string? TinhTrangSucKhoe { get; set; }
+        public string? BenhNen { get; set; }
+
+        public DateTime? NgayKham { get; set; }
 
         [StringLength(255)]
         public string? GhiChu { get; set; }
-
-        // 🔹 Navigation property
-        public HocSinh? HocSinh { get; set; }
     }
 }

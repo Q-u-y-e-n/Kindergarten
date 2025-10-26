@@ -1,0 +1,68 @@
+@model IEnumerable<kindergarten.Models.LopHoc>
+
+@{
+    ViewData["Title"] = "Danh sách lớp học";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-row-reverse">
+        <h3 class="text-primary mb-0">
+            <i class="bi bi-list"></i> Danh sách lớp học
+        </h3>
+        <a asp-action="Create" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Thêm lớp học
+        </a>
+    </div>
+
+
+    <table class="table table-bordered table-hover align-middle shadow-sm">
+        <thead class="table-info text-center">
+            <tr>
+                <th>Mã lớp</th>
+                <th>Tên lớp</th>
+                <th>Năm học</th>
+                <th>Sĩ số tối đa</th>
+                <th>Giáo viên CN</th>
+                <th>Ghi chú</th>
+                <th style="width:130px;">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var lop in Model)
+                {
+                    <tr>
+                        <td class="text-center">@lop.MaLop</td>
+                        <td>@lop.TenLop</td>
+                        <td class="text-center">@lop.NamHoc</td>
+                        <td class="text-center">@lop.SiSoToiDa</td>
+                        <td>@lop.GiaoVienChuNhiem?.HoTen</td>
+                        <td>@lop.GhiChu</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@lop.MaLop" class="btn btn-warning btn-sm me-1">
+                                <i class="bi bi-pencil-square"></i> Sửa
+                            </a>
+                            <form asp-action="DeleteConfirmed" method="post" style="display:inline;"
+                                onsubmit="return confirm('Bạn có chắc chắn muốn xóa lớp học này không?');">
+                                <input type="hidden" name="MaLop" value="@lop.MaLop" />
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash"></i> Xóa
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center text-muted">Không có lớp học nào.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>

@@ -1,0 +1,43 @@
+@model kindergarten.Models.HocSinh
+@{
+    ViewData["Title"] = "Thêm học sinh";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thêm học sinh mới</h2>
+<hr />
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="HoTen" class="form-label"></label>
+        <input asp-for="HoTen" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NgaySinh" class="form-label"></label>
+        <input asp-for="NgaySinh" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GioiTinh" class="form-label"></label>
+        <select asp-for="GioiTinh" class="form-control">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DiaChi" class="form-label"></label>
+        <input asp-for="DiaChi" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Lớp học</label>
+        <select asp-for="MaLop" asp-items="ViewBag.MaLop" class="form-control">
+            <option value="">-- Chọn lớp --</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Thêm</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

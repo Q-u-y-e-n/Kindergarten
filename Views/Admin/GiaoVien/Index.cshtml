@@ -1,0 +1,46 @@
+@model IEnumerable<kindergarten.Models.GiaoVien>
+@{
+    ViewData["Title"] = "Danh sách giáo viên";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<h2>Danh sách giáo viên</h2>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Thêm giáo viên</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Họ tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th>Bằng cấp</th>
+            <th>Kinh nghiệm</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gv in Model)
+        {
+            <tr>
+                <td>@gv.HoTen</td>
+                <td>@gv.NgaySinh?.ToString("yyyy-MM-dd")</td>
+                <td>@gv.GioiTinh</td>
+                <td>@gv.SoDienThoai</td>
+                <td>@gv.Email</td>
+                <td>@gv.BangCap</td>
+                <td>@gv.KinhNghiem</td>
+                <td>@(gv.TrangThai ? "Hoạt động" : "Ngừng")</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@gv.MaGV">Sửa</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@gv.MaGV">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

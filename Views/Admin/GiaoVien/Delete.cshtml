@@ -1,0 +1,27 @@
+@model kindergarten.Models.GiaoVien
+@{
+    ViewData["Title"] = "Xóa giáo viên";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<h2 class="text-danger">Xóa giáo viên</h2>
+<hr />
+<p>Bạn có chắc chắn muốn xóa giáo viên: <strong>@Model.HoTen</strong> không?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    @* Anti-forgery token để bảo mật POST *@
+    @Html.AntiForgeryToken()
+
+    @* Hidden field truyền MaGV *@
+    <input type="hidden" asp-for="MaGV" />
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-danger">
+            <i class="bi bi-trash"></i> Xóa
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Hủy
+        </a>
+    </div>
+</form>

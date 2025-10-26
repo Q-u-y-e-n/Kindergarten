@@ -1,0 +1,53 @@
+@model kindergarten.Models.HocSinh
+
+@{
+    ViewData["Title"] = "Sửa học sinh";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var dsLop = ViewBag.DSLop as List<SelectListItem>;
+}
+
+<div class="container mt-4">
+    <h3 class="text-primary"><i class="bi bi-pencil-square"></i> Sửa thông tin học sinh</h3>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="MaHS" />
+
+        <div class="mb-3">
+            <label asp-for="HoTen" class="form-label">Họ tên</label>
+            <input asp-for="HoTen" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="NgaySinh" class="form-label">Ngày sinh</label>
+            <input asp-for="NgaySinh" type="date" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="GioiTinh" class="form-label">Giới tính</label>
+            <select asp-for="GioiTinh" class="form-select">
+                <option>Nam</option>
+                <option>Nữ</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DiaChi" class="form-label">Địa chỉ</label>
+            <input asp-for="DiaChi" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="TinhTrang" class="form-label">Tình trạng</label>
+            <input asp-for="TinhTrang" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MaLop" class="form-label">Lớp học</label>
+            <select asp-for="MaLop" class="form-select" asp-items="dsLop">
+                <option value="">-- Chọn lớp học --</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Cập nhật</button>
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div>

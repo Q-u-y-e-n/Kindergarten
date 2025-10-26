@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kindergarten.Models
 {
-    [Table("HocPhi")]
+    [Table("HOCPHI")]
     public class HocPhi
     {
         [Key]

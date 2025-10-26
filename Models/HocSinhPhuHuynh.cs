@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kindergarten.Models
 {
-    [Table("HocSinhPhuHuynh")]
-    public class HocSinhPhuHuynh
+    [Table("HOCSINH_PHUHUYNH")]
+    public class HOCSINH_PHUHUYNH
     {
         [Key]
         public int MaHS { get; set; }

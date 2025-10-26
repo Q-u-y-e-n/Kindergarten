@@ -1,18 +1,26 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using kindergarten.Data; // ⚠️ Sửa namespace cho khớp project của bạn
+using kindergarten.Data;
 using kindergarten.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//
 // =======================================
-// 1️⃣ KẾT NỐI CƠ SỞ DỮ LIỆU
+// 1️⃣ KẾT NỐI CSDL
 // =======================================
 builder.Services.AddDbContext<KindergartenContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("kindergarten")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Kindergarten")));
+//
+// ⚠️ Kiểm tra lại trong appsettings.json:
+// "ConnectionStrings": {
+//     "Kindergarten": "Server=.;Database=KindergartenPrivate;Trusted_Connection=True;TrustServerCertificate=True;"
+// }
+//
 
+//
 // =======================================
-// 2️⃣ XÁC THỰC COOKIE
+// 2️⃣ CẤU HÌNH COOKIE AUTHENTICATION
 // =======================================
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -26,6 +34,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.Name = "KinderAuthCookie";
     });
 
+//
 // =======================================
 // 3️⃣ BẬT SESSION
 // =======================================
@@ -37,30 +46,42 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+//
 // =======================================
-// 4️⃣ CẤU HÌNH MVC & VIEW LOCATION
+// 4️⃣ CẤU HÌNH MVC + RAZOR VIEW
 // =======================================
 builder.Services.AddControllersWithViews()
     .AddRazorOptions(options =>
     {
+        // ⚙️ Đường dẫn view mặc định
         options.ViewLocationFormats.Clear();
         options.ViewLocationFormats.Add("/Views/{1}/{0}.cshtml");
-        options.ViewLocationFormats.Add("/Views/Account/{0}.cshtml");
         options.ViewLocationFormats.Add("/Views/Admin/{0}.cshtml");
+        options.ViewLocationFormats.Add("/Views/Account/{0}.cshtml");
         options.ViewLocationFormats.Add("/Views/Parent/{0}.cshtml");
         options.ViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
+
+        // ⚙️ Hỗ trợ tìm view trong thư mục Areas (Admin, Parent, Teacher, ...)
+        options.AreaViewLocationFormats.Clear();
+        options.AreaViewLocationFormats.Add("/Areas/{2}/Views/{1}/{0}.cshtml");
+        options.AreaViewLocationFormats.Add("/Areas/{2}/Views/Shared/{0}.cshtml");
+        options.AreaViewLocationFormats.Add("/Views/Shared/{0}.cshtml");
     });
 
+//
 // =======================================
-// 5️⃣ LOGGING (tuỳ chọn)
+// 5️⃣ LOGGING
+// =======================================
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
+//
 // =======================================
-// 6️⃣ BUILD APP
+// 6️⃣ TẠO APP
 // =======================================
 var app = builder.Build();
 
+//
 // =======================================
 // 7️⃣ CẤU HÌNH PIPELINE
 // =======================================
@@ -79,36 +100,28 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// ⚠️ Thứ tự quan trọng:
-app.UseSession();         // Trước Authentication
-app.UseAuthentication();  // Trước Authorization
+// ⚠️ Thứ tự quan trọng: Session trước Authentication
+app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
+//
 // =======================================
-// 8️⃣ ĐỊNH NGHĨA ROUTES
+// 8️⃣ MAP CONTROLLER ROUTE
 // =======================================
+
+// Route cho các khu vực (Areas)
 app.MapControllerRoute(
-    name: "admin",
-    pattern: "Admin/{action=Index}/{id?}",
-    defaults: new { controller = "Admin" }
-);
+    name: "areas",
+    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
-app.MapControllerRoute(
-    name: "phuhuynh",
-    pattern: "PhuHuynh/{action=Index}/{id?}",
-    defaults: new { controller = "PhuHuynh" }
-);
-
-
-app.MapControllerRoute(
-    name: "account",
-    pattern: "Account/{action=Login}/{id?}",
-    defaults: new { controller = "Account" }
-);
-
+// Route mặc định: Account/Login
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Account}/{action=Login}/{id?}"); // Mặc định vào trang login
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
+//
+// =======================================
+// 9️⃣ CHẠY APP
 // =======================================
 app.Run();

@@ -1,0 +1,16 @@
+@model kindergarten.Models.LopHoc
+@{
+    ViewData["Title"] = "Xóa lớp học";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-4">
+    <h3 class="text-danger"><i class="bi bi-trash"></i> Xác nhận xóa lớp học</h3>
+    <p>Bạn có chắc muốn xóa lớp: <strong>@Model.TenLop</strong> không?</p>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="MaLop" />
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

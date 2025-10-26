@@ -34,10 +34,12 @@ namespace kindergarten.Models
         public LopHoc? LopHoc { get; set; }
 
         // Navigation properties
-        public ICollection<HocSinhPhuHuynh>? HocSinhPhuHuynhs { get; set; }
+        public ICollection<HOCSINH_PHUHUYNH>? HocSinhPhuHuynhs { get; set; }
         public ICollection<DiemDanh>? DiemDanhs { get; set; }
         public ICollection<KetQua>? KetQuas { get; set; }
-        public ICollection<HocPhi>? HocPhis { get; set; }
+        // public ICollection<HocPhi>? HocPhis { get; set; }
         public ICollection<HoSoSucKhoe>? HoSoSucKhoes { get; set; }
+        public ICollection<ThamGiaHD>? ThamGiaHDs { get; set; }
+
     }
 }

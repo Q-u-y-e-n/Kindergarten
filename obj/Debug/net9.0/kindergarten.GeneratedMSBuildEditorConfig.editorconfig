@@ -40,20 +40,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGllbURhbmguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/GiaoVien.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2lhb1ZpZW4uY3NodG1s
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/GiaoVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2lhb1ZpZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/GiaoVien/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2lhb1ZpZW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/GiaoVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2lhb1ZpZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/GiaoVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR2lhb1ZpZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HoatDong.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9hdERvbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HocSinh.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9jU2luaC5jc2h0bWw=
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HocSinh/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9jU2luaFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/LopHoc.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9wSG9jLmNzaHRtbA==
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HocSinh/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9jU2luaFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HocSinh/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9jU2luaFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/HocSinh/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9jU2luaFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/LopHoc/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9wSG9jXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/LopHoc/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9wSG9jXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/LopHoc/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9wSG9jXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/LopHoc/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9wSG9jXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/chuyendulieu/hk1_nam4_25-26/PP_PT_PM_HĐ/GK_OOP(2)/kindergarten/Views/Admin/SucKhoe.cshtml]

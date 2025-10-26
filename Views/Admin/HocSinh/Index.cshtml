@@ -1,0 +1,41 @@
+@model IEnumerable<kindergarten.Models.HocSinh>
+
+@{
+    ViewData["Title"] = "Danh sách học sinh";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; // nếu có layout admin
+}
+
+<h2>Danh sách học sinh</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">+ Thêm học sinh</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã HS</th>
+            <th>Họ tên</th>
+            <th>Giới tính</th>
+            <th>Ngày sinh</th>
+            <th>Lớp học</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hs in Model)
+        {
+            <tr>
+                <td>@hs.MaHS</td>
+                <td>@hs.HoTen</td>
+                <td>@hs.GioiTinh</td>
+                <td>@hs.NgaySinh?.ToString("dd/MM/yyyy")</td>
+                <td>@hs.LopHoc?.TenLop</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@hs.MaHS" class="btn btn-warning btn-sm">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@hs.MaHS" class="btn btn-danger btn-sm">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,27 +1,39 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace kindergarten.Models;
-
-[Table("HoatDong")]
-public class HoatDong
+namespace kindergarten.Models
 {
-    [Key]
-    public int MaHD { get; set; }
+    [Table("HOATDONG")]
+    public class HoatDong
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaHD { get; set; }
 
-    [Required, StringLength(100)]
-    public string TenHD { get; set; }
+        [StringLength(100)]
+        public string? TenHD { get; set; }
 
-    public string? ChuDe { get; set; }
+        [StringLength(100)]
+        public string? ChuDe { get; set; }
 
-    public string? DiaDiem { get; set; }
+        [StringLength(255)]
+        public string? DiaDiem { get; set; }
 
-    public DateTime? NgayToChuc { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? NgayToChuc { get; set; }
 
-    public string? NguoiPhuTrach { get; set; }
+        [StringLength(100)]
+        public string? NguoiPhuTrach { get; set; }
 
-    public decimal? ChiPhi { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal? ChiPhi { get; set; }
 
-    public string? MoTa { get; set; }
+        [StringLength(255)]
+        public string? MoTa { get; set; }
+
+        // 🔹 Quan hệ: 1 hoạt động có nhiều bản ghi tham gia
+        public ICollection<ThamGiaHD>? ThamGiaHDs { get; set; }
+    }
 }
